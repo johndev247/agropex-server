@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.25.0",
+    "apollo-server-express": "^3.0.0",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.26.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.12",
+    "nodemon": "^2.0.7",
+    "promises-all": "^1.0.0"
+  }
+}
