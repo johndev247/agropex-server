@@ -12,7 +12,7 @@ const server = new ApolloServer({
   context: ({req}) => ({req}),
 });
 mongoose
-  .connect("mongodb://localhost/pivon", {
+  .connect(Db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
