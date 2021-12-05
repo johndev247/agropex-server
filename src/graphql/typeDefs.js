@@ -1,8 +1,5 @@
 const {gql} = require("apollo-server");
 const typeDefs = gql`
-  type File {
-    url: String!
-  }
   type Success {
     message: String!
   }
@@ -155,7 +152,6 @@ const typeDefs = gql`
     createPackage(userInput: createPackage): Package!
     deletePackage(packageId: String!): User!
     createUserPackage(packageId: String!, amount: Int!): UserPackage!
-    uploadDp(file: Upload): File!
     deleteUser(userId: String!): User!
     sendMessage(userId: String!, message: String!): User!
     updateProfile(
