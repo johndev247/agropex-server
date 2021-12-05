@@ -14,21 +14,21 @@ mongoose
   })
   .then(async () => {
     console.log("Mongodb Connected");
-  await function startServer(){
-  const app = express();
-   const apolloServer = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: ({req}) => ({req}),
-});
-    await apolloServer.start();
-  apolloServer.applyMiddleware({app});
-    app.use("/express", (req, res)=> res.send("from express"))
-    app.listen({port: PORT}, () => {
-    console.log(
-      `Server running on http://localhost:${PORT}${apolloServer.graphqlPath}`
-    );
-  });
-  }
-  startServer()
+    async function startServer() {
+      const app = express();
+      const apolloServer = new ApolloServer({
+        typeDefs,
+        resolvers,
+        context: ({req}) => ({req}),
+      });
+      await apolloServer.start();
+      apolloServer.applyMiddleware({app});
+      app.use("/express", (req, res) => res.send("from express"));
+      app.listen({port: PORT}, () => {
+        console.log(
+          `Server running on http://localhost:${PORT}${apolloServer.graphqlPath}`
+        );
+      });
+    };
+    startServer();
   });
