@@ -13,7 +13,6 @@ const changePasswordResolver = require("./mutations/changePassword");
 const resetPasswordRequestResolver = require("./mutations/resetPasswordRequest");
 const deletePackageResolver = require("./mutations/deletePackage");
 const deleteUserResolver = require("./mutations/deleteUser");
-const uploadDpResolver = require("./mutations/uploadDp");
 const resetPasswordResolver = require("./mutations/resetPassword");
 const sendMessageResolver = require("./mutations/sendMessage");
 const createUserPackageResolver = require("./mutations/createUserPackage");
@@ -46,7 +45,6 @@ module.exports = {
     ...deleteUserResolver.Mutation,
     ...createUserPackageResolver.Mutation,
     ...sendMessageResolver.Mutation,
-    ...uploadDpResolver.Mutation,
     ...updateProfileResolver.Mutation,
     ...changePasswordResolver.Mutation,
     ...resetPasswordResolver.Mutation,
