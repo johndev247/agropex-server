@@ -19,6 +19,8 @@ mongoose
       const apolloServer = new ApolloServer({
         typeDefs,
         resolvers,
+        introspection: true,
+  playground: true,
         context: ({req}) => ({req}),
       });
       await apolloServer.start();
