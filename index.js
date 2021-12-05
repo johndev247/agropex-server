@@ -27,7 +27,9 @@ mongoose
       await apolloServer.start();
       apolloServer.applyMiddleware({app});
       app.use("/express", (req, res) => res.send("from express"));
-      app.use(cors())
+      app.use(cors({
+      origin: "https://agropex.herokuapp.com"
+      }))
       app.listen({port: PORT}, () => {
         console.log(
           `Server running on http://localhost:${PORT}${apolloServer.graphqlPath}`
